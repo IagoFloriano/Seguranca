@@ -1,7 +1,7 @@
 import hashlib as h
 
 def main():
-    dictfile = open('/usr/share/dict/brazilian')
+    dictfile = open('dicionario.txt')
     dictlines = dictfile.readlines()
 
     for line in dictlines:
