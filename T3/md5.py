@@ -7,8 +7,9 @@ def main():
     for line in dictlines:
         word = line.strip()
         md5 = h.md5(word.encode()).hexdigest()
-        if len(word) == 5 and md5 == 'e8d95a51f3af4a3b134bf6bb680a213a':
-            print(word + ": " + md5)
+        if md5 == 'e8d95a51f3af4a3b134bf6bb680a213a':
+            print("senha descoberta foi " + word)
+            print("com md5 " + md5)
             break
 
 
