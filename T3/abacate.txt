@@ -1,0 +1,3 @@
+senha descoberta foi: abacate
+com yescript: $y$j9T$nFwHNF0c3SCbH6ESyzSKw.$ph1Q6UMJnIyAU6O7ZLYH14H5C4.V1SJjcrjLqVQuG00
+./yescript.py  dicionario.txt > abacate.txt  40,22s user 6,60s system 99% cpu 47,053 total

@@ -1,0 +1,3 @@
+senha descoberta foi senha
+com md5 e8d95a51f3af4a3b134bf6bb680a213a
+./md5.py > md5.txt  0,17s user 0,01s system 99% cpu 0,175 total
