@@ -101,6 +101,13 @@ com yescript: $y$j9T$nFwHNF0c3SCbH6ESyzSKw.$ph1Q6UMJnIyAU6O7ZLYH14H5C4.V1SJjcrjL
 ```
 Apenas 40 segundos para conseguir uma senha, não está nada mal.
 
-Houve uma tentativa de roda o `yescript.py` para a senha 2 com o dicionario.txt, porém
-a senha não foi encontrada, então, foi usado o rockyou.txt como banco de palavras. Obtive
+Houve uma tentativa de rodar o `yescript.py` para a senha 2 com o dicionario.txt, porém
+a senha não foi encontrada, então, foi usado o onemillion.txt como banco de palavras. Obtive
 , então, os seguintes resultados:
+```
+senha descoberta foi: 123admin
+com yescript: $y$j9T$5LImmws2fco9AeRmLSB2j0$fYPmdqu1Q/FDiwPJgkCIW9wX76w12SNEiYAodUzafo5
+./yescript.py  onemillion.txt  2009,15s user 622,40s system 99% cpu 44:00,13 total
+```
+Essa senha demorou 44 minuto, mais lenta que as outras, mas ainda um tempo razoável para
+se obter uma senha.
