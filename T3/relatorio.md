@@ -15,7 +15,7 @@ Para as três senhas foi usado um dicionario para se tentar achar a senha, os di
 usados foram:
 
 - dicionario.txt ('/usr/share/dict/brazilian' nas máquinas do dinf) um dicionário em portugues
-- rockyou.txt ([https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)) um banco de senhas comuns
+- onemillion.txt ([https://github.com/fendy3d/crack-passwords-py/blob/master/1MillionPassword.txt](https://github.com/fendy3d/crack-passwords-py/blob/master/1MillionPassword.txt)) um banco de senhas comuns
 
 # Senha 1
 
