@@ -1,0 +1,13 @@
+HTTP/1.1 302 Found
+Date: Fri, 18 Sep 2020 11:41:22 GMT
+Content-Type: text/html;charset=utf-8
+Location: https://c.bing.com/c.gif?Red3=DataXMS_pd&IXID=E0
+Content-Length: 0
+Server: ATS
+Age: 0
+Connection: keep-alive
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+

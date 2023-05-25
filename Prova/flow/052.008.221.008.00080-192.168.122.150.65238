@@ -1,0 +1,7 @@
+HTTP/1.1 410 Gone
+Content-Type: text/plain
+Server: ribs2.0
+Content-Length: 10
+Connection: keep-alive
+
+410 Gone 

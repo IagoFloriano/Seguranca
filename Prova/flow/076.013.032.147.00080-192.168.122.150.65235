@@ -1,0 +1,25 @@
+HTTP/1.1 500 Server Error
+Date: Fri, 18 Sep 2020 11:41:22 GMT
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Type: text/html; charset=ISO-8859-1
+Content-Length: 302
+Server: ATS
+Age: 0
+Connection: keep-alive
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 </title>
+</head>
+<body>
+<h2>HTTP ERROR: 500</h2>
+<p>Problem accessing /cms. Reason:
+<pre>    java.lang.NullPointerException</pre></p>
+<hr /><i><small>Powered by Jetty://</small></i>
+</body>
+</html>
